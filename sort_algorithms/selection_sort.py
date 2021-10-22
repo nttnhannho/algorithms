@@ -1,8 +1,10 @@
 def selection_sort(sample_lst, reverse=False):
+    # Time complexity = O(n^2)
+    # Space complexity = O(1)
     for index, item in enumerate(sample_lst[:-1]):
         val = min(sample_lst[index:])
         val_index = sample_lst.index(val, index)
-        if index != val_index:
+        if sample_lst[index] != sample_lst[val_index]:  # Unstable -> Stable condition
             sample_lst[index], sample_lst[val_index] = sample_lst[val_index], sample_lst[index]
 
     if reverse:
@@ -16,7 +18,7 @@ def selection_sort_without_minmax(sample_lst, reverse=False):
             if subitem < val:
                 val = subitem
         val_index = sample_lst.index(val, index)
-        if index != val_index:
+        if sample_lst[index] != sample_lst[val_index]:  # Unstable -> Stable condition
             sample_lst[index], sample_lst[val_index] = sample_lst[val_index], sample_lst[index]
 
     if reverse:

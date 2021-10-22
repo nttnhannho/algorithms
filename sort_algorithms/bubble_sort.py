@@ -1,4 +1,6 @@
 def bubble_sort(sample_lst, reverse=False):
+    # Time complexity = O(n^2)
+    # Space complexity = O(1)
     for exec_time in range(len(sample_lst) - 1, 0, -1):
         swapped = False
         for index in range(exec_time):

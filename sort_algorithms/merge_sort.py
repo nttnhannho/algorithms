@@ -1,4 +1,6 @@
 def merge_sort(lst, reverse=False):
+    # Time complexity = O(nlogn)
+    # Space complexity = O(n)
     if len(lst) > 1:
         mid = len(lst) // 2
         left = lst[:mid]
