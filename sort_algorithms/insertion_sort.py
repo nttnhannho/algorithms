@@ -1,6 +1,8 @@
 def insertion_sort(sample_lst, reverse=False):
     # Time complexity = O(n^2)
     # Space complexity = O(1)
+    # In-place algorithm
+    # Stable
     for index, item in enumerate(sample_lst[1:], start=1):
         pos = index
         while item < sample_lst[pos - 1] and pos > 0:

@@ -1,6 +1,8 @@
 def shell_sort(sample_lst, reverse=False):
-    # Time complexity = O(n^2)
+    # Time complexity = O(n*(log(n))^2)
     # Space complexity = O(1)
+    # In-place algorithm
+    # Unstable
     gap = len(sample_lst) // 2
     while gap > 0:
         for index, item in enumerate(sample_lst[gap:], start=gap):

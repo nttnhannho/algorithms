@@ -1,6 +1,8 @@
 def merge_sort(lst, reverse=False):
-    # Time complexity = O(nlogn)
+    # Time complexity = O(n*log(n))
     # Space complexity = O(n)
+    # Out-of-place algorithm
+    # Stable
     if len(lst) > 1:
         mid = len(lst) // 2
         left = lst[:mid]

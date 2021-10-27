@@ -1,6 +1,8 @@
 def selection_sort(sample_lst, reverse=False):
     # Time complexity = O(n^2)
     # Space complexity = O(1)
+    # In-place algorithm
+    # Unstable
     for index, item in enumerate(sample_lst[:-1]):
         val = min(sample_lst[index:])
         val_index = sample_lst.index(val, index)
