@@ -11,7 +11,7 @@ def recursive_exponential_search(sample_lst, length, value):
     while index < length and sample_lst[index] <= value:
         index *= 2
 
-    return recursive_binary_search_sorted(sample_lst, index // 2, min(i, length - 1), value)
+    return recursive_binary_search_sorted(sample_lst, index // 2, min(index, length - 1), value)
 
 
 if __name__ == "__main__":
