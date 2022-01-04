@@ -4,6 +4,7 @@ def linear_search(sample_lst, value):
     for index, item in enumerate(sample_lst):
         if item == value:
             return index
+
     return -1
 
 
@@ -20,6 +21,7 @@ def improved_linear_search(sample_lst, value):
             return right
         left += 1
         right -= 1
+
     return -1
 
 
