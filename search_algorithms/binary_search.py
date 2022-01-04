@@ -3,7 +3,8 @@ def recursive_binary_search_sorted(sample_lst, left, right, value):
     # Space complexity = O(log(n))
     if left > right:
         return -1
-    mid = left + (right - left) // 2
+
+    mid = (left + right) // 2
     mid_val = sample_lst[mid]
     if mid_val == value:
         return mid
@@ -19,11 +20,11 @@ def iterative_binary_search_sorted(sample_lst, value):
     left = 0
     right = len(sample_lst) - 1
     while left <= right:
-        mid = left + (right - left) // 2
+        mid = (left + right) // 2
         mid_val = sample_lst[mid]
         if mid_val == value:
             return mid
-        elif value < mid_val:
+        if value < mid_val:
             left = mid + 1
         else:
             right = mid - 1
