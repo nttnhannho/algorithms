@@ -3,25 +3,25 @@ def selection_sort(sample_lst, reverse=False):
     # Space complexity = O(1)
     # In-place algorithm
     # Unstable
-    for index, item in enumerate(sample_lst[:-1]):
+    for index in range(len(sample_lst) - 1):
         val = min(sample_lst[index:])
         val_index = sample_lst.index(val, index)
-        if sample_lst[index] != sample_lst[val_index]:  # Unstable -> Stable condition
-            sample_lst[index], sample_lst[val_index] = sample_lst[val_index], sample_lst[index]
+        # if sample_lst[index] != sample_lst[val_index]:  # Unstable -> Stable condition
+        sample_lst[index], sample_lst[val_index] = sample_lst[val_index], sample_lst[index]
 
     if reverse:
         sample_lst.reverse()
 
 
 def selection_sort_without_minmax(sample_lst, reverse=False):
-    for index, item in enumerate(sample_lst[:-1]):
+    for index in range(len(sample_lst) - 1):
         val = sample_lst[index]
         for subitem in sample_lst[index + 1:]:
             if subitem < val:
                 val = subitem
         val_index = sample_lst.index(val, index)
-        if sample_lst[index] != sample_lst[val_index]:  # Unstable -> Stable condition
-            sample_lst[index], sample_lst[val_index] = sample_lst[val_index], sample_lst[index]
+        # if sample_lst[index] != sample_lst[val_index]:  # Unstable -> Stable condition
+        sample_lst[index], sample_lst[val_index] = sample_lst[val_index], sample_lst[index]
 
     if reverse:
         sample_lst.reverse()
