@@ -18,8 +18,6 @@ def jump_search(sample_lst, value):
         if item == value:
             return index
 
-    return -1
-
 
 if __name__ == "__main__":
     sample1 = [1, 2, 3, 4, 5, 6, 7]
